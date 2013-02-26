@@ -1,0 +1,68 @@
+// Default button
+
+.btn {
+  white-space: nowrap;
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  padding: 8px 10px;
+  font-size: 21px;
+  line-height: 1.1;
+  background: #a2a940;
+  border: 0 none;
+  @include border-radius(8px);
+  @include text-shadow(0 1px rgba(#000, .3));
+  @include box-shadow(0 2px 0 #71762d);
+
+  &:hover {
+    color: #fff;
+    background: lighten(#a2a940, 5%);
+  }
+
+  &:active {
+    @include box-shadow(inset 0 -1px 0 rgba(#71762D, .8));
+    @include text-shadow(0 -1px rgba(#000, .3));
+  }
+
+  &:disabled {
+    color: #b29a69;
+    background: #e5d3af;
+    @include text-shadow(0 1px 0 #fff);
+    @include box-shadow(none);
+  }
+}
+
+// Button sizes
+
+.btn-small {
+  font-size: 14px;
+  font-weight: normal;
+  padding: 4px 7px;
+  @include border-radius(5px);
+}
+
+.btn-large {
+  font-size: 26px;
+  padding: 14px;
+}
+
+// Button types
+
+.btn-head {
+  @include box-shadow(0 2px 0 rgba(#000, .3));
+}
+
+.btn-nav {
+  padding: 5px 12px;
+  font-weight: normal;
+  background: #68604f;
+  @include border-radius(5px);
+  @include box-shadow(0 -1px 0 rgba(#000, .32));
+
+  &:hover {
+    background: #7e7157;
+    @include box-shadow(0 -1px 0 rgba(#000, .48));
+  }
+}

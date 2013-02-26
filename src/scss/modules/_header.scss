@@ -1,0 +1,72 @@
+.main-header {
+  height: 90px;
+  background-color: $header-c;
+
+  .container {
+    @extend %clearfix;
+    padding: 0 30px;
+  }
+}
+
+.home .main-header {
+  background: generated-image-url('home-top-bg.png') no-repeat center 0;
+  height: 586px;
+  margin-bottom: -70px; // Bg image overlay
+  z-index: 1;
+  position: relative;
+}
+
+@import "logo/*.png";
+@include all-logo-sprites;
+
+.branding {
+  @extend %ir;
+  display: block;
+  width: 208px;
+  height: 43px;
+
+  &:hover {
+    @extend .logo-hover;
+  }
+}
+
+.main-header {
+  h1 {
+    @include float-left();
+    margin: 22px 0 0;
+  }
+
+  .nav-main {
+    @include float-right();
+    margin-top: 28px;
+  }
+}
+
+.main-header .media {
+  padding-top: 30px;
+
+  .intro-video {
+    margin: 0 0 0 111px;
+    float: left;
+    width: $intro-video-width;
+    height: $intro-video-height;
+  }
+  
+  .disclaimer {
+    margin-left: $intro-video-width + 111px + 23px;
+    color: #fff;
+    font-size: 21px;
+    line-height: 1;
+    @include text-shadow(0 -1px rgba(#000, .9));
+
+    h2 {
+      margin: 0;
+      line-height: 0.9;
+      font-size: 46px;
+    }
+
+    p {
+      margin: 10px 0;
+    }
+  }
+}

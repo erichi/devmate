@@ -1,0 +1,141 @@
+$classes-icons: sprite-map("icons/classes/*.png");
+
+.nav-main {
+  ul {
+    @extend %hor-list;
+
+    li {
+      padding: 0;
+      margin-right: 20px;
+      @include text-shadow(0 -1px rgba(#000, .8));
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+
+  a {
+    font-size: 20px;
+    text-decoration: none;
+    color: $header-nav-fc;
+
+    &:hover {
+      color: #bdc7cc;
+    }
+  }
+
+  .btn,
+  .btn:hover {
+    color: #fff;
+  }
+}
+
+.nav-classes-list {
+  ul {
+    @extend %no-list;
+    width: 295px;
+  }
+  
+  li {
+    border-bottom: 1px solid $light-gray;
+    padding-left: 12px;
+
+    a {
+      display: block;
+      font-size: 24px;
+      height: 42px;
+      line-height: 42px;
+      text-decoration: none;
+
+      &:hover {
+        color: $default-fc;
+        text-decoration: none;
+      }
+
+      &.active {
+        cursor: default;
+      }
+    }
+  }
+
+  .c-all {
+    background: sprite($classes-icons, all, 100%, 0px) no-repeat;
+
+    &:hover,
+    &.active {
+      background: sprite($classes-icons, all-active, 100%, 0) no-repeat;
+    }
+  }
+
+  .c-html {
+    background: sprite($classes-icons, html, 100%, 0px) no-repeat;
+
+    &:hover,
+    &.active {
+      background: sprite($classes-icons, html-active, 100%, 0) no-repeat;
+    }
+  }
+
+  .c-css {
+    background: sprite($classes-icons, css, 100%, 0px) no-repeat;
+
+    &:hover,
+    &.active {
+      background: sprite($classes-icons, css-active, 100%, 0) no-repeat;
+    }
+  }
+
+  .c-js {
+    background: sprite($classes-icons, js, 100%, 0px) no-repeat;
+
+    &:hover,
+    &.active {
+      background: sprite($classes-icons, js-active, 100%, 0) no-repeat;
+    }
+  }
+
+  .c-ror {
+    background: sprite($classes-icons, ror, 100%, 0px) no-repeat;
+
+    &:hover,
+    &.active {
+      background: sprite($classes-icons, ror-active, 100%, 0) no-repeat;
+    }
+  }
+}
+
+.nav-tabs {
+  ul {
+    @extend %hor-list;
+  }
+
+  li {
+    height: 36px;
+    line-height: 33px;
+
+    &:last-child a {
+      border: 0 none;
+    }
+  }
+
+  .active {
+    background: #f4ecdc;
+    position: relative;
+    left: -1px;
+    @include border-radius(8px 8px 0 0);
+
+    a {
+      text-decoration: none;
+      border: 0 none;
+      padding-left: 11px;
+      color: $default-fc;
+    }
+  }
+
+  a {
+    font-size: 14px;
+    padding: 0 10px;
+    border-right: 1px solid #ccc5c5;
+  }
+}

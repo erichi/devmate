@@ -1,0 +1,43 @@
+{% extends "index.html" %}
+
+{% block title %}UI{% endblock %}
+
+{% block content %}
+    <p>
+        <button class="btn btn-small">Сохранить</button>
+    </p>
+
+    <p>
+        <button class="btn">Сохранить</button>
+        <button class="btn" disabled>Сохранить</button>
+    </p>
+
+    <p>
+        <button class="btn btn-large">Сохранить</button>
+        <button class="btn btn-large btn-head">Начни изучение сегодня</button>
+    </p>
+
+
+    <nav class="nav-classes-list">
+        <ul>
+            <li><a href="#" class="c-all">Все курсы</a></li>
+            <li><a href="#" class="c-html">HTML</a></li>
+            <li><a href="#" class="c-css">CSS</a></li>
+            <li><a href="#" class="c-js">JavaScript</a></li>
+            <li><a href="#" class="c-ror">Ruby on Rails</a></li>
+        </ul>
+    </nav>
+
+    <ul class="nav-tabs">
+        <li class="active">
+            <a href="#all" data-toggle="tab">Для всех</a>
+        </li><li>
+            <a href="#beginners" data-toggle="tab">Для новичков</a>
+        </li><li>
+            <a href="#advanced" data-toggle="tab">Для продвинутых</a>
+        </li><li>
+            <a href="#professional" data-toggle="tab">Для профи</a>
+        </li>
+    </ul>
+
+{% endblock %}

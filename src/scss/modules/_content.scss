@@ -1,0 +1,202 @@
+.main-content {
+  @include box-shadow(0 0 5px 20px rgba(#000, .03));
+  padding: 0 30px 135px 30px; // Bg image overlay protect
+}
+
+.home {
+  .main-content {
+    padding-top: 50px; // Bg image overlay protect
+  }
+}
+
+// Content on home page
+.home .main-content {
+  .content {
+    margin-right: 320px;
+  }
+
+  aside {
+    width: 300px;
+    float: right;
+  }
+
+  article {
+    p {
+      margin: 0;
+    }
+  }
+
+  .columns {
+    @extend %clearfix;
+    margin-top: 20px;
+
+    article {
+      width: 47%;
+      float: left;
+
+      &:last-child {
+        float: right;
+      }
+    }
+  }
+
+  .home-go-btn {
+    position: relative;
+    padding: 60px 0;
+
+    .btn {
+      position: absolute;
+      top:  30px;
+      left: 100px;
+    }
+
+    hr {
+      margin: 0;
+    }
+  }
+}
+
+// Home page reviews list
+.main-content .reviews-list {
+  h3 {
+    @extend %clearfix;
+
+    a {
+      @extend %to-right;
+      margin-top: 7px;
+      font-size: 14px;
+      color: $gray;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  ul {
+    @extend %no-list;
+
+    li {
+      padding: 10px 0;
+      border-top: 1px solid $light-gray;
+    }
+  }
+
+  .r-pic {
+    overflow: hidden;
+    float: left;
+    margin-top: 9px;
+    @include border-radius(70px);
+    @include box-shadow(-6px 0 0 #a2a940, 0 -6px 0 #de9231, 0 4px 0 #e9d54a);
+  }
+
+  .r-cont {
+    padding-left: 80px;
+    
+    p {
+      font-size: 14px;
+      margin: 0;
+    }
+    
+    strong {
+      font-size: 16px;
+    }
+
+    em {
+      color: $gray;
+    }
+  }
+}
+
+
+.main-content {
+  h2 {
+    font-size: 44px;
+    margin: 0;
+  }
+  
+  h3 {
+    font-size: 24px;
+    font-weight: normal;
+    margin: 0;
+  }
+}
+
+// Classes page
+
+.page-header {
+  @extend %clearfix;
+  border-bottom: 1px solid $light-gray;
+  padding: 30px 12px 0;
+
+  .nav-tabs {
+    float: right;
+    margin-top: 25px;
+  }
+}
+
+.page-with-sidebar {
+  padding-top: 25px;
+
+  aside {
+    float: left;
+  }
+
+  .content {
+    padding-left: 320px;
+  }
+}
+
+.main-content .announce {
+  background: #f8f4ea generated-image-url('announce-bg.png') no-repeat right bottom;
+  padding: 20px 150px 20px 25px;
+  min-height: 175px;
+  @include border-radius(10px);
+  @include box-shadow(0 2px #e4d3b3);
+
+  h3 {
+    font-size: 30px;
+    font-weight: bold;
+  }
+  
+  p {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+  }
+}
+
+// Classes page list
+.main-content .classes-list {
+  @extend %no-list;
+  margin-top: 20px;
+
+  li {
+    @extend %clearfix;
+    border-bottom: 1px solid $light-gray;
+    padding: 12px;
+    
+    &:last-child {
+      border-bottom: 0 none;
+    }
+  }
+
+  p {
+    margin: 0 0 10px 0;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  .lang-badge {
+    float: left;
+    
+    img {
+      margin-top: 5px;
+    }
+  }
+  
+  .class-descr {
+    padding-left: 238px;
+  }
+}

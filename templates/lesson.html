@@ -1,0 +1,45 @@
+{% extends "index.html" %}
+
+{% block title %}Урок{% endblock %}
+
+{% block content %}
+    <h2>Два слова о нас</h2>
+
+    <aside class="reviews-list">
+        <h3>Отзывы <a href="#">Все отзывы</a></h3>
+
+        <ul>
+            {% for i in range(3) %}
+                <li>
+                    <div class="r-pic">
+                        <img src="http://placehold.it/70x70" alt="">
+                    </div>
+
+                    <div class="r-cont">
+                        <p><strong>Анна Константинопольская</strong></p>
+                        <p><em>Менеджер проектов</em></p>
+                        <p>{{ lipsum(n=1, html=False, min=20, max=30) }}</p>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    </aside>
+
+    <section class="content">
+        <article>
+            <p>{{ lipsum(n=1, html=False, min=50, max=80) }}</p>
+        </article>
+
+        <section class="columns">
+            <article>
+                <h3>Для новичков</h3>
+                <p>{{ lipsum(n=1, html=False, min=50, max=60) }}</p>
+            </article>
+
+            <article>
+                <h3>Для продвинутых</h3>
+                <p>{{ lipsum(n=1, html=False, min=50, max=60) }}</p>
+            </article>
+        </section>
+    </section>
+{% endblock %}

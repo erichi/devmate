@@ -1,0 +1,58 @@
+.main-footer {
+  background: generated-image-url('footer-bg.png') no-repeat center 0;
+  height: 362px;
+  margin-top: -135px; // Bg image overlay
+  padding-top: 135px;
+  font-size: 16px;
+  color: #766648;
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .f-content-left,
+  .f-content-col {
+    float: left;
+    margin-right: 10%;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  .f-content-left {
+    float: left;
+    width: 48%;
+  }
+
+  ul {
+    @extend %no-list;
+    margin-top: 10px;
+  }
+
+  a {
+    color: #766648;
+    text-decoration: none;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  
+  small a {
+    text-decoration: underline;
+    
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  
+  p {
+    margin: 10px 0 0;
+  }
+  
+  .copy {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+}

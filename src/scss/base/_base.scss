@@ -1,0 +1,59 @@
+body {
+  font: normal  18px/1.2 $default-font-family;
+  color: $default-fc;
+  background: #fff;
+}
+
+* {
+  @include box-sizing(border-box);
+
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}
+
+a {
+  color: $link-fc;
+  text-decoration: underline;
+
+  &:hover {
+    //text-decoration: underline;
+    color: #10455e;
+  }
+}
+
+h2 {
+  font-size: 26px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h2,
+h3,
+h4 {
+  //font-family: $headings-font-family;
+}
+
+hr {
+  border-top: 1px solid #e8e8e2;
+}
+
+small {
+  font-size: 90%;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 980px;
+
+  &.main {
+    background: #efefef;
+  }
+}
+
+.page {
+ // margin-left: $left-sidebar-width;
+}
