@@ -9,8 +9,10 @@ $experimental-support-for-svg: true;
 @import "base/base";
 
 @import "components/buttons";
+@import "components/badges";
 @import "components/icons";
 @import "components/navs";
+@import "components/breadcrumbs";
 
 @import "modules/header";
 @import "modules/sidebar";

@@ -1,0 +1,25 @@
+// Default badge
+
+.badge {
+  white-space: nowrap;
+  display: inline-block;
+  color: #fff;
+  background: #000;
+  text-align: center;
+  font-weight: bold;
+  padding: 0 7px 3px 7px;
+  font-size: 22px;
+  line-height: 1;
+  @include border-radius(5px);
+}
+
+.badge-new {
+  background: #aa1417;
+  @include text-shadow(0 -1px rgba(#000, .3));
+}
+
+.badge-soon {
+  background: #e5d3af;
+  color: #b29a69;
+  @include text-shadow(0 1px rgba(#fff, .5));
+}

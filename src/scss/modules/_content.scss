@@ -1,6 +1,10 @@
 .main-content {
   @include box-shadow(0 0 5px 20px rgba(#000, .03));
-  padding: 0 30px 135px 30px; // Bg image overlay protect
+  padding-bottom: 135px; // Bg image overlay protect
+
+  .content {
+    padding: 0 30px;
+  }
 }
 
 .home {
@@ -11,7 +15,7 @@
 
 // Content on home page
 .home .main-content {
-  .content {
+  .content-left {
     margin-right: 320px;
   }
 
@@ -159,19 +163,28 @@
     font-weight: bold;
   }
   
+  h2 {
+    line-height: 1;
+  }
+  
   p {
     margin: 0 0 10px 0;
     font-size: 16px;
   }
+
+  .level {
+    color: #b3b4ad;
+    margin-bottom: 7px;
+    display: block;
+  }
 }
 
 // Classes page list
-.main-content .classes-list {
+.main-content .items-list {
   @extend %no-list;
   margin-top: 20px;
 
   li {
-    @extend %clearfix;
     border-bottom: 1px solid $light-gray;
     padding: 12px;
     
@@ -179,6 +192,13 @@
       border-bottom: 0 none;
     }
   }
+}
+
+@import "badges/lvl/*.png";
+@include all-lvl-sprites;
+
+.classes-list-item {
+  @extend %clearfix;
 
   p {
     margin: 0 0 10px 0;
@@ -189,14 +209,100 @@
   }
 
   .lang-badge {
+    position: relative;
     float: left;
-    
+
     img {
       margin-top: 5px;
     }
+
+    .lvl {
+      position: absolute;
+      top: 3px;
+      left: -2px;
+      width: 88px;
+      height: 89px;
+    }
+
+/*    .beginner {
+      background: sprite($level-icons, beginner, 0, 0px) no-repeat;
+    }
+
+    .advanced {
+      background: sprite($level-icons, advanced, 0, 0px) no-repeat;
+    }
+
+    .professional {
+      background: sprite($level-icons, professional, 0, 0px) no-repeat;
+    }*/
   }
-  
+
   .class-descr {
     padding-left: 238px;
+  }
+}
+
+// Class page
+
+.class-header {
+  padding-top: 35px;
+
+  .breadcrumbs {
+    margin: 0 30px 17px 30px;
+  }
+
+  .announce {
+    @include border-radius(0);
+
+    p {
+      font-size: 20px;
+    }
+  }
+}
+
+.main-content .lessons-list {
+  li {
+    margin-left: 233px;
+    padding: 12px 0;
+  }
+}
+
+.lessons-list-item {
+  @extend %clearfix;
+  position: relative;
+
+  &.lesson-soon {
+    h3, p {
+      color: #e5d3af;
+    }
+  }
+
+  .badge-wrap {
+    position: absolute;
+    width: 100px;
+    left: -112px;
+    top: 16px;
+    height: 100%;
+    text-align: right;
+  }
+
+  h3 {
+    color: #6f6a5e;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  p {
+    color: #59554d;
+    margin: 0;
+  }
+
+  .lesson-descr {
+    padding-right: 230px;
+  }
+
+  .btn {
+    float: right;
+    margin: 28px 5px 0 0;
   }
 }

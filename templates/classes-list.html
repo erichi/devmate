@@ -1,0 +1,117 @@
+{% extends "index.html" %}
+
+{% block title %}Курсы{% endblock %}
+
+{% block content %}
+    <div class="content">
+        <header class="page-header">
+            <nav class="nav-tabs">
+                <ul>
+                    <li class="active">
+                        <a href="#all" data-toggle="tab">Для всех</a>
+                    </li><li>
+                    <a href="#beginners" data-toggle="tab">Для новичков</a>
+                </li><li>
+                    <a href="#advanced" data-toggle="tab">Для продвинутых</a>
+                </li><li>
+                    <a href="#professional" data-toggle="tab">Для профи</a>
+                </li>
+                </ul>
+            </nav>
+
+            <h2>Курсы</h2>
+        </header>
+
+        <div class="page-with-sidebar">
+            <aside class="classes-nav">
+                <nav class="nav-classes-list">
+                    <ul>
+                        <li><a href="#" class="c-all active">Все курсы</a></li>
+                        <li><a href="#" class="c-html">HTML</a></li>
+                        <li><a href="#" class="c-css">CSS</a></li>
+                        <li><a href="#" class="c-js">JavaScript</a></li>
+                        <li><a href="#" class="c-ror">Ruby on Rails</a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <section class="content">
+                <article class="announce">
+                    <h3>Анонс</h3>
+
+                    <p>{{ lipsum(n=1, html=False, min=20, max=40) }}</p>
+                    <p><a href="#">Подробности</a></p>
+                </article>
+
+                <article class="tab-content">
+                    <ul class="items-list classes-list tab-pane fade in active " id="all">
+                        {% for lang in ['html','css','js','ror'] %}
+                        <li class="classes-list-item">
+                            <div class="lang-badge">
+                                <img src="/static/img/badges/langs/{{ lang }}.png" alt="">
+                            </div>
+
+                            <div class="class-descr">
+                                <h3>{{ lipsum(n=1, html=False, min=3, max=4) }}</h3>
+                                <p>{{ lipsum(n=1, html=False, min=20, max=30) }}</p>
+                                <p><a class="btn" href="/class">Смотреть</a></p>
+                            </div>
+                        </li>
+                        {% endfor %}
+                    </ul>
+
+                    <ul class="items-list classes-list tab-pane fade" id="beginners">
+                        {% for lang in ['html','css','ror'] %}
+                        <li class="classes-list-item">
+                            <div class="lang-badge">
+                                <img src="/static/img/badges/langs/{{ lang }}.png" alt="">
+                                <span class="lvl lvl-beginner"></span>
+                            </div>
+
+                            <div class="class-descr">
+                                <h3>{{ lipsum(n=1, html=False, min=3, max=4) }}</h3>
+                                <p>{{ lipsum(n=1, html=False, min=20, max=30) }}</p>
+                                <p><a class="btn" href="/class">Смотреть</a></p>
+                            </div>
+                        </li>
+                        {% endfor %}
+                    </ul>
+
+                    <ul class="items-list classes-list tab-pane fade" id="advanced">
+                        {% for lang in ['html','js','ror'] %}
+                        <li class="classes-list-item">
+                            <div class="lang-badge">
+                                <img src="/static/img/badges/langs/{{ lang }}.png" alt="">
+                                <span class="lvl lvl-advanced"></span>
+                            </div>
+
+                            <div class="class-descr">
+                                <h3>{{ lipsum(n=1, html=False, min=3, max=4) }}</h3>
+                                <p>{{ lipsum(n=1, html=False, min=20, max=30) }}</p>
+                                <p><a class="btn" href="/class">Смотреть</a></p>
+                            </div>
+                        </li>
+                        {% endfor %}
+                    </ul>
+
+                    <ul class="items-list classes-list tab-pane fade" id="professional">
+                        {% for lang in ['html','css'] %}
+                        <li class="classes-list-item">
+                            <div class="lang-badge">
+                                <img src="/static/img/badges/langs/{{ lang }}.png" alt="">
+                                <span class="lvl lvl-professional"></span>
+                            </div>
+
+                            <div class="class-descr">
+                                <h3>{{ lipsum(n=1, html=False, min=3, max=4) }}</h3>
+                                <p>{{ lipsum(n=1, html=False, min=20, max=30) }}</p>
+                                <p><a class="btn" href="/class">Смотреть</a></p>
+                            </div>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </article>
+            </section>
+        </div>
+    </div>
+{% endblock %}

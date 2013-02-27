@@ -1,0 +1,46 @@
+.breadcrumbs {
+  @extend %hor-list;
+  //margin-top: 50px;
+  overflow: hidden;
+
+  a {
+    background: #f4ecdc;
+    display: block;
+    padding: 6px 9px;
+    font-size: 14px;
+    @include text-shadow(0 1px #fff);
+    @include border-radius(4px);
+
+    &:hover {
+      background: #eee1c8;
+    }
+  }
+
+  li:last-child {
+    margin: 0 2em 0 0;
+
+    a {
+      padding-right: 0;
+      position: relative;
+      z-index: 1;
+
+      &:after {
+        background: #f4ecdc;
+        content: "";
+        height: 2.5em;
+        margin-top: -1.25em;
+        position: absolute;
+        right: -0.5em;
+        top: 50%;
+        width: 2.5em;
+        z-index: -1;
+        @include border-radius(4px);
+        @include transform(rotate(45deg));
+      }
+
+      &:hover:after {
+        background: #eee1c8;
+      }
+    }
+  }
+}
