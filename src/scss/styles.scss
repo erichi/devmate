@@ -13,6 +13,7 @@ $experimental-support-for-svg: true;
 @import "components/icons";
 @import "components/navs";
 @import "components/breadcrumbs";
+@import "components/forms";
 
 @import "modules/header";
 @import "modules/sidebar";
@@ -20,5 +21,6 @@ $experimental-support-for-svg: true;
 @import "modules/footer";
 
 @import "plugins/bootstrap-tab";
+@import "plugins/bootstrap-modal";
 
 @import "base/media";

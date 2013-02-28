@@ -17,7 +17,7 @@
             <nav class="nav-main" role="navigation">
                 <ul>
                     <li><a href="#">Помощь</a></li>
-                    <li><a href="#">Вход</a></li>
+                    <li><a href="#login-modal" data-toggle="modal">Вход</a></li>
                     <li><a href="#" class="btn btn-nav">Регистрация</a></li>
                 </ul>
             </nav>
@@ -85,6 +85,70 @@
             </section>
         </div>
     </footer>
+
+    <div id="login-modal" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-side-bg">
+            <div class="modal-bottom-bg">
+                <div class="modal-content">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+
+                    <div class="modal-body">
+                        <div id="auth-type" class="form auth-step current">
+                            <h3 class="modal-title">Вход</h3>
+
+                            <div class="line">
+                                <a class="btn btn-large" href="#">Войти через Facebook</a>
+                            </div>
+                            <div class="line">
+                                <a class="btn btn-large" href="#">Войти через ВКонтакте</a>
+                            </div>
+                            <div class="line c-line">
+                                или <a class="change-auth-step" href="#auth-form">войти при помощи e-mail</a>
+                            </div>
+                        </div>
+
+                        <div id="auth-form" class="form auth-step">
+                            <h3 class="modal-title">Вход</h3>
+
+                            <form action="/login">
+                                <div class="line">
+                                    <p><label for="email">E-mail:</label></p>
+                                    <input class="full" type="email" name="email" id="email" required>
+                                </div>
+                                <div class="line">
+                                    <p>
+                                        <label for="password">Пароль:</label>
+                                        <a href="#auth-remember-pswd" class="forgot-pswd change-auth-step">напомнить пароль</a>
+                                    </p>
+                                    <input class="full" type="password" name="password" id="password" required>
+                                </div>
+                                <div class="line c-line">
+                                    <input type="submit" class="btn btn-large" value="Войти">
+                                    <label for="rememberme" class="remember-me">
+                                        <input type="checkbox" name="rememberme" id="rememberme"> помнить меня
+                                    </label>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div id="auth-remember-pswd" class="form auth-step">
+                            <h3 class="modal-title">Напомнить пароль</h3>
+
+                            <form action="/login">
+                                <div class="line">
+                                    <p><label for="recover-email">Введите свою почту:</label></p>
+                                    <input class="full" type="email" name="recover_email" id="recover-email" required>
+                                </div>
+                                <div class="line">
+                                    <input type="submit" class="btn btn-large" value="Отправить пароль">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="/static/js/libs/jquery-1.9.1.min.js"><\/script>')</script>

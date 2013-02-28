@@ -2,11 +2,11 @@
 @import "compass/utilities/general/float";
 @import "compass/typography/lists/horizontal-list";
 
-%to-left {
+.to-left {
   @include float-left();
 }
 
-%to-right {
+.to-right {
   @include float-right();
 }
 

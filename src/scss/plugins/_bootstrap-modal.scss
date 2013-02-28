@@ -1,0 +1,182 @@
+//
+// Modals
+// --------------------------------------------------
+
+// Background
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  background-color: rgba(#000, 0.7);
+  // Fade for backdrop
+  &.fade { opacity: 0; }
+}
+
+.modal-backdrop,
+.modal-backdrop.fade.in {
+  @include opacity(1);
+}
+
+// Base modal
+.modal {
+  position: fixed;
+  top: 180px;
+  left: 50%;
+  z-index: 1050;
+  width: 610px;
+  margin-left: -305px;
+  overflow: hidden;
+  outline: none;
+
+  &.fade {
+    @include transition(opacity .3s linear, top .3s ease-out);
+    top: -25%;
+  }
+  &.fade.in { top: 10%; }
+}
+
+// Modal backgrounds
+.modal {
+  padding-top: 94px;
+
+  &,
+  .modal-side-bg,
+  .modal-bottom-bg {
+    background: generated-image-url('modal-bg.png') no-repeat 41px 0;
+  }
+
+  .modal-side-bg {
+    padding: 0 63px;
+    background-position: -529px 0;
+  }
+
+  .modal-bottom-bg {
+    padding-bottom: 45px;
+    background-position: -1181px 100%;
+  }
+}
+
+.modal-backdrop-footer {
+  background: generated-image-url('footer-bg.png') no-repeat 50% 0;
+  position: absolute;
+  height: 267px;
+  width: 100%;
+  bottom: 0;
+}
+
+$modal-icons: sprite-map("icons/modal/*.png");
+
+.modal-content {
+  width: 484px;
+  margin: 0 auto;
+  background: #f4ecdc;
+  position: relative;
+  @include border-radius(20px);
+  @include box-shadow(0 0 10px rgba(#000, .65));
+
+  .close {
+    @extend %ir;
+    position: absolute;
+    right: 14px;
+    top: 14px;
+    width: 17px;
+    height: 18px;
+    background: sprite($modal-icons, close, 0, 0) no-repeat;
+    border: 0 none;
+    padding: 0;
+    z-index: 2;
+
+    &:hover {
+      background: sprite($modal-icons, close-hover, 0, 0) no-repeat;
+    }
+  }
+
+  .modal-title {
+    margin: 0 0 20px 0;
+    font-size: 44px;
+    color: #9d8e67;
+    @include text-shadow(0 1px #fff);
+  }
+}
+
+// Body (where all modal content resides)
+.modal-body {
+  position: relative;
+  overflow-y: auto;
+  max-height: 400px;
+  padding: 30px;
+}
+// Remove bottom margin if need be
+.modal-form {
+  margin-bottom: 0;
+}
+
+// Footer (for actions)
+.modal-footer {
+  @extend %clearfix; // clear it in case folks use .pull-* classes on buttons
+  padding: 14px 15px 15px;
+  margin-bottom: 0;
+  text-align: right; // right align buttons
+  background-color: #f5f5f5;
+  border-top: 1px solid #ddd;
+  @include border-radius(0 0 6px 6px);
+  @include box-shadow(inset 0 1px 0 #fff);
+
+  // Properly space out buttons
+  .btn + .btn {
+    margin-left: 5px;
+    margin-bottom: 0; // account for input[type="submit"] which gets the bottom margin like all other inputs
+  }
+  // but override that for button groups
+  .btn-group .btn + .btn {
+    margin-left: -1px;
+  }
+  // and override it for block buttons as well
+  .btn-block + .btn-block {
+    margin-left: 0;
+  }
+}
+
+// Modal steps
+
+.modal-content .auth-step {
+  display: none;
+
+  &.current {
+    display: block;
+  }
+}
+
+#login-modal {
+  label {
+    font-size: 24px;
+  }
+
+  .forgot-pswd {
+    float: right;
+    font-size: 14px;
+    color: #000;
+    margin-top: 8px;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .c-line {
+    color: #323232;
+    font-size: 18px;
+
+    a {
+      color: #323232;
+    }
+  }
+
+  .remember-me {
+    float: right;
+    margin-top: 15px;
+  }
+}
