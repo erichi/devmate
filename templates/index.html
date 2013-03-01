@@ -6,6 +6,7 @@
     <title>{% block title %}{% endblock %} - devmate</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="/static/img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic">
     <link rel="stylesheet" href="/static/css/styles.css">
 </head>
@@ -18,7 +19,7 @@
                 <ul>
                     <li><a href="#">Помощь</a></li>
                     <li><a href="#login-modal" data-toggle="modal">Вход</a></li>
-                    <li><a href="#" class="btn btn-nav">Регистрация</a></li>
+                    <li><a href="#register-modal" class="btn btn-nav" data-toggle="modal">Регистрация</a></li>
                 </ul>
             </nav>
         </div>
@@ -30,7 +31,7 @@
                 </div>
 
                 <div class="disclaimer">
-                    <h2>Лучший путь <br>к изучению технологии</h2>
+                    <h2>Лучший путь <br> к изучению технологии</h2>
                     <p>Узнай как создавать сайты при помощи HTML, CSS, Java Script и Ruby on Rails</p>
                     <a class="btn btn-large btn-head" href="/classes-list">Начни изучение сегодня</a>
                 </div>
@@ -90,17 +91,17 @@
         <div class="modal-side-bg">
             <div class="modal-bottom-bg">
                 <div class="modal-content">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
 
                     <div class="modal-body">
                         <div id="auth-type" class="form auth-step current">
                             <h3 class="modal-title">Вход</h3>
 
                             <div class="line">
-                                <a class="btn btn-large" href="#">Войти через Facebook</a>
+                                <a class="btn btn-large btn-fb" href="#">Войти через Facebook</a>
                             </div>
                             <div class="line">
-                                <a class="btn btn-large" href="#">Войти через ВКонтакте</a>
+                                <a class="btn btn-large btn-vk" href="#">Войти через ВКонтакте</a>
                             </div>
                             <div class="line c-line">
                                 или <a class="change-auth-step" href="#auth-form">войти при помощи e-mail</a>
@@ -110,20 +111,23 @@
                         <div id="auth-form" class="form auth-step">
                             <h3 class="modal-title">Вход</h3>
 
-                            <form action="/login">
+                            <form action="/login" novalidate>
                                 <div class="line">
                                     <p><label for="email">E-mail:</label></p>
                                     <input class="full" type="email" name="email" id="email" required>
+                                    <p class="error"></p>
                                 </div>
                                 <div class="line">
                                     <p>
                                         <label for="password">Пароль:</label>
-                                        <a href="#auth-remember-pswd" class="forgot-pswd change-auth-step">напомнить пароль</a>
+                                        <a href="#auth-forgot-pswd" class="forgot-pswd change-auth-step">напомнить пароль</a>
                                     </p>
                                     <input class="full" type="password" name="password" id="password" required>
+                                    <p class="error"></p>
                                 </div>
                                 <div class="line c-line">
-                                    <input type="submit" class="btn btn-large" value="Войти">
+                                    <input type="submit" class="btn btn-large" value="Войти" disabled>
+                                    <p class="error btn-error"></p>
                                     <label for="rememberme" class="remember-me">
                                         <input type="checkbox" name="rememberme" id="rememberme"> помнить меня
                                     </label>
@@ -131,16 +135,17 @@
                             </form>
                         </div>
 
-                        <div id="auth-remember-pswd" class="form auth-step">
+                        <div id="auth-forgot-pswd" class="form auth-step">
                             <h3 class="modal-title">Напомнить пароль</h3>
 
-                            <form action="/login">
+                            <form action="/forgot-password" novalidate>
                                 <div class="line">
                                     <p><label for="recover-email">Введите свою почту:</label></p>
-                                    <input class="full" type="email" name="recover_email" id="recover-email" required>
+                                    <input class="full" type="email" name="email" id="recover-email" required>
+                                    <p class="error"></p>
                                 </div>
-                                <div class="line">
-                                    <input type="submit" class="btn btn-large" value="Отправить пароль">
+                                <div class="line c-line">
+                                    <input type="submit" class="btn btn-large" value="Отправить пароль" disabled>
                                 </div>
                             </form>
                         </div>
@@ -149,6 +154,42 @@
             </div>
         </div>
     </div>
+
+<div id="register-modal" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+
+        <div class="modal-body">
+            <h3 class="modal-title">Регистрация</h3>
+
+            <div class="auth-btns">
+                <a class="btn btn-large btn-fb" href="#">Через Facebook</a>
+                <a class="btn btn-large btn-vk" href="#">Через ВКонтакте</a>
+            </div>
+
+            <div class="separator">
+                <span>или</span>
+                <hr>
+            </div>
+
+            <div class="form">
+                <form action="/register" novalidate>
+                    <div class="r-col">
+                        <p><label for="reg-email">E-mail:</label></p>
+                        <input class="full" type="email" name="reg_email" id="reg-email" required>
+                    </div>
+
+                    <div class="r-col">
+                        <p><label for="reg-pswd">Пароль:</label></p>
+                        <input class="full" type="password" name="reg_pswd" id="reg-pswd" required>
+                    </div>
+
+                    <input type="submit" class="btn btn-large" value="Войти" disabled>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="/static/js/libs/jquery-1.9.1.min.js"><\/script>')</script>

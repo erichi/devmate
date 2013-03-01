@@ -22,7 +22,7 @@
   }
 
   &:active {
-    @include box-shadow(inset 0 -1px 0 rgba(#71762D, .8));
+    @include box-shadow(inset 0 1px 0 rgba(#71762D, .8));
     @include text-shadow(0 -1px rgba(#000, .3));
   }
 
@@ -64,5 +64,33 @@
   &:hover {
     background: #7e7157;
     @include box-shadow(0 -1px 0 rgba(#000, .48));
+  }
+}
+
+.btn-fb {
+  background: #3b5998;
+  @include box-shadow(0 3px 0 #2f477a);
+
+  &:hover {
+    background: #35508e;
+    @include box-shadow(0 3px 0 #2a3f6f);
+  }
+
+  &:active {
+    @include box-shadow(inset 0 1px 0 #2a3f6f);
+  }
+}
+
+.btn-vk {
+  background: #3686c3;
+  @include box-shadow(0 3px 0 #2b6b9c);
+
+  &:hover {
+    background: #307bbc;
+    @include box-shadow(0 3px 0 #266192);
+  }
+
+  &:active {
+    @include box-shadow(inset 0 1px 0 #266192);
   }
 }

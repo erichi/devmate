@@ -54,6 +54,7 @@ $classes-icons: sprite-map("icons/classes/*.png");
       }
 
       &.active {
+        color: $default-fc;
         cursor: default;
       }
     }

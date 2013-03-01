@@ -92,6 +92,10 @@
     margin-top: 9px;
     @include border-radius(70px);
     @include box-shadow(-6px 0 0 #a2a940, 0 -6px 0 #de9231, 0 4px 0 #e9d54a);
+
+    img {
+      @include border-radius(70px);
+    }
   }
 
   .r-cont {
