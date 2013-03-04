@@ -1,27 +1,18 @@
 {% extends "index.html" %}
 
-{% block title %}Курс{% endblock %}
+{% block title %}Урок{% endblock %}
 
 {% block content %}
-<header class="class-header">
+<header class="lesson-header">
     <ul class="breadcrumbs">
         <li><a href="#">Курсы</a></li>
         <li><a href="#">HTML</a></li>
+        <li><a href="#">Создание простого сайта</a></li>
     </ul>
 
-    <article class="announce">
-        <div class="classes-list-item">
-            <div class="lang-badge">
-                <img src="/static/img/badges/langs/html.png" alt="">
-                <span class="lvl lvl-beginner"></span>
-            </div>
-
-            <div class="class-descr">
-                <h2>Создание простого сайта</h2>
-                <small class="level">Начальный уровень</small>
-                <p>{{ lipsum(n=1, html=False, min=35, max=45) }}</p>
-            </div>
-        </div>
+    <article>
+        <h2>Текстовый редактор и HTML</h2>
+        <p>{{ lipsum(n=1, html=False, min=35, max=45) }}</p>
     </article>
 </header>
 
@@ -30,10 +21,10 @@
         {% for i in range(10) %}
         <li class="lessons-list-item">
             <div class="badge-wrap">
-                <span class="badge badge-new">нью</span>
+
             </div>
 
-            <a href="/lesson" class="btn">Смотреть</a>
+            <a href="#" class="btn">Смотреть</a>
 
             <div class="lesson-descr">
                 <h3>{{ lipsum(n=1, html=False, min=2, max=5) }}</h3>
