@@ -94,3 +94,52 @@
     @include box-shadow(inset 0 1px 0 #266192);
   }
 }
+
+$lesson-types-icons: sprite-map("icons/lesson-types/*.png");
+
+.btn-ico {
+  height: 75px;
+  width: 130px;
+  @include box-shadow(0 2px 0 #e4d3b3);
+  @include border-radius(10px);
+
+  &:active {
+    @include box-shadow(inset 0 1px 0 #6b6f29);
+  }
+
+  &.b-code {
+    background: #f8f4ea sprite($lesson-types-icons, code, 50%, 0) no-repeat;
+
+    &:hover {
+      background: #f8f4ea sprite($lesson-types-icons, code-hover, 50%, 0) no-repeat;
+    }
+
+    &:active {
+      background: #9ca33b sprite($lesson-types-icons, code-active, 50%, 0) no-repeat;
+    }
+  }
+
+  &.b-play {
+    background: #f8f4ea sprite($lesson-types-icons, play, 50%, 0) no-repeat;
+
+    &:hover {
+      background: #f8f4ea sprite($lesson-types-icons, play-hover, 50%, 0) no-repeat;
+    }
+
+    &:active {
+      background: #9ca33b sprite($lesson-types-icons, play-active, 50%, 0) no-repeat;
+    }
+  }
+
+  &.b-text {
+    background: #f8f4ea sprite($lesson-types-icons, text, 50%, 0) no-repeat;
+
+    &:hover {
+      background: #f8f4ea sprite($lesson-types-icons, text-hover, 50%, 0) no-repeat;
+    }
+
+    &:active {
+      background: #9ca33b sprite($lesson-types-icons, text-active, 50%, 0) no-repeat;
+    }
+  }
+}

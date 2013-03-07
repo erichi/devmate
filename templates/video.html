@@ -3,17 +3,18 @@
 {% block title %}Урок{% endblock %}
 
 {% block content %}
+<div class="video-block">
+    <img src="http://placehold.it/980x500" alt="">
+</div>
+
 <header class="lesson-header">
     <ul class="breadcrumbs">
         <li><a href="#">Курсы</a></li>
         <li><a href="#">HTML</a></li>
         <li><a href="#">Создание простого сайта</a></li>
     </ul>
-
-    <article>
-        <h2>Текстовый редактор и HTML</h2>
-        <p>{{ lipsum(n=1, html=False, min=35, max=45) }}</p>
-    </article>
+    <h2>Введение</h2>
+    <p>{{ lipsum(n=1, html=False, min=35, max=45) }}</p>
 </header>
 
 <section class="content">
@@ -25,9 +26,9 @@
             </div>
 
             {% if loop.index % 2 %}
-            <a href="/video" class="btn">Смотреть</a>
+            <a href="#" class="btn">Смотреть</a>
             {% else %}
-            <a href="/video" class="btn">Попробовать</a>
+            <a href="#" class="btn">Попробовать</a>
             {% endif %}
 
             <div class="lesson-descr">
