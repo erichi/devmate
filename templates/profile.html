@@ -1,0 +1,143 @@
+{% extends "index.html" %}
+
+{% block title %}Профиль{% endblock %}
+
+{% block content %}
+    <div class="content">
+        <header class="page-header">
+            <a href="#profile-settings-modal" class="btn" data-toggle="modal">Настроить</a>
+            <h2>Константин Константинопольский</h2>
+        </header>
+
+        <div class="page-with-sidebar profle-sidebar">
+            <aside class="profile-info">
+                <figure>
+                    <img src="http://placehold.it/210px210" alt="">
+
+                    {% if true %}
+                    <figcaption>
+                        <a href="#" class="btn btn-small">ред. фото</a>
+                    </figcaption>
+                    {% endif %}
+                </figure>
+
+                <ul>
+                    <li>Россия, Ижевск</li>
+                    <li>Сайт: <a href="http://konstantinopolsky.ru" target="_blank">konstantinopolsky.ru</a></li>
+                    <li>
+                        В сетях:
+                        <a href="#" target="_blank" class="social-sprite social-vkontakte" title="ВКонтакте">ВКонтакте</a>
+                        <a href="#" target="_blank" class="social-sprite social-facebook" title="Facebook">Facebook</a>
+                        <a href="#" target="_blank" class="social-sprite social-twitter" title="Twitter">Twitter</a>
+                    </li>
+                    <li>С нами: с 10 августа 2012</li>
+                </ul>
+            </aside>
+
+            <section class="content">
+                <ul class="items-list profile-classes-list">
+                    {% for reward in ['star','flag','star','flag','star','flag'] %}
+                    <li>
+                        <div class="class-reward">
+                            <span class="rewards-sprite rewards-{{ reward }}"></span>
+                        </div>
+
+                        <div class="class-descr">
+                            <h3>{{ lipsum(n=1, html=False, min=2, max=5) }}</h3>
+                            <p>{{ lipsum(n=1, html=False, min=25, max=30) }}</p>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </section>
+        </div>
+    </div>
+{% endblock %}
+
+{% block modal %}
+    <div id="profile-settings-modal" class="modal modal-center hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-side-bg">
+            <div class="modal-bottom-bg">
+                    <div class="modal-content">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+
+                            <div class="modal-body">
+                                <h3 class="modal-title">Настройки</h3>
+
+                                <div class="form form-side-lbl">
+                                    <form action="/profile-settings">
+                                        <div class="line">
+                                            <label for="profile-first-name"><em>Имя:</em></label>
+
+                                            <div class="field">
+                                                <input type="text" name="profile_first_name" id="profile-first-name" value="Константин" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="line">
+                                            <label for="profile-last-name"><em>Фамилия:</em></label>
+
+                                            <div class="field">
+                                                <input type="text" name="profile_last_name" id="profile-last-name" value="Константинопольский" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="line">
+                                            <label for="profile-site"><em>Личный сайт:</em></label>
+
+                                            <div class="field">
+                                                <input type="url" name="profile_site" id="profile-site" value="http://konstaninopolsky.ru" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="line">
+                                            <label for="profile-facebook"><em>Facebook</em>:</label>
+
+                                            <div class="field">
+                                                <input type="text" name="profile_facebook" id="profile-facebook" value="www.facebook.com/kkostya" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="line">
+                                            <label for="profile-vkontakte"><em>ВКонтакте:</em></label>
+
+                                            <div class="field">
+                                                <input type="text" name="profile_vkontakte" id="profile-vkontakte" value="www.vk.com/kkostya" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="line">
+                                            <label for="profile-twitter"><em>Twitter:</em></label>
+
+                                            <div class="field">
+                                                <input type="text" name="profile_twitter" id="profile-twitter" value="@kkostya" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="line">
+                                            <label for="profile-email"><em>Email:</em></label>
+
+                                            <div class="field">
+                                                <input type="email" name="profile_email" id="profile-email" value="bender@gmail.com" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="line">
+                                            <label><em>Пароль:</em></label>
+
+                                            <div class="field">
+                                                <a href="#" class="btn">сменить пароль</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="line">
+                                            <input type="submit" class="btn btn-large" value="Сохранить">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+    </div>
+{% endblock %}

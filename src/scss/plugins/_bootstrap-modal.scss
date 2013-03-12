@@ -111,6 +111,17 @@ $modal-icons: sprite-map("icons/modal/*.png");
   padding: 30px;
 }
 
+// TODO refactor!!!
+.modal-center {
+  &.modal.fade.in {
+    top: -30px;
+  }
+
+  .modal-body {
+    max-height: none;
+  }
+}
+
 // Modal steps
 
 .modal-content .auth-step {

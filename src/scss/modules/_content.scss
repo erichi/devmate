@@ -118,6 +118,8 @@
 
 
 .main-content {
+  @extend %clearfix;
+
   h2 {
     font-size: 44px;
     margin: 0;
@@ -141,6 +143,11 @@
     float: right;
     margin-top: 25px;
   }
+
+  .btn {
+    float: right;
+    margin: 9px 0 13px 0;
+  }
 }
 
 .page-with-sidebar {
@@ -152,6 +159,12 @@
 
   .content {
     padding-left: 320px;
+  }
+}
+
+.profle-sidebar {
+  .content {
+    padding-left: 230px;
   }
 }
 
@@ -194,6 +207,17 @@
     
     &:last-child {
       border-bottom: 0 none;
+    }
+
+    h3 {
+      color: #6f6a5e;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    p {
+      color: #59554d;
+      margin: 0;
     }
   }
 }
@@ -290,17 +314,6 @@
     text-align: right;
   }
 
-  h3 {
-    color: #6f6a5e;
-    font-size: 28px;
-    font-weight: bold;
-  }
-
-  p {
-    color: #59554d;
-    margin: 0;
-  }
-
   .lesson-descr {
     padding-right: 230px;
   }
@@ -379,5 +392,42 @@
   ul {
     @extend %no-list;
     margin: 0 0 28px 20px;
+  }
+}
+
+// Lesson video page
+
+.video-header {
+  background: #a2a940;
+  font-size: 20px;
+  padding: 30px 250px 30px 35px;
+
+  &, h2 {
+    color: #fff;
+    @include text-shadow(0 -1px #727738);
+  }
+}
+
+.main-content .profile-classes-list {
+  margin: 0;
+
+  li {
+    font-size: 16px;
+
+    h3 {
+      font-size: 24px;
+    }
+
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+
+  .class-reward {
+    float: left;
+  }
+  
+  .class-descr {
+    padding-left: 70px;
   }
 }

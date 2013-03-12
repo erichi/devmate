@@ -155,41 +155,43 @@
         </div>
     </div>
 
-<div id="register-modal" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+    <div id="register-modal" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
 
-        <div class="modal-body">
-            <h3 class="modal-title">Регистрация</h3>
+            <div class="modal-body">
+                <h3 class="modal-title">Регистрация</h3>
 
-            <div class="auth-btns">
-                <a class="btn btn-large btn-fb" href="#">Через Facebook</a>
-                <a class="btn btn-large btn-vk" href="#">Через ВКонтакте</a>
-            </div>
+                <div class="auth-btns">
+                    <a class="btn btn-large btn-fb" href="#">Через Facebook</a>
+                    <a class="btn btn-large btn-vk" href="#">Через ВКонтакте</a>
+                </div>
 
-            <div class="separator">
-                <span>или</span>
-                <hr>
-            </div>
+                <div class="separator">
+                    <span>или</span>
+                    <hr>
+                </div>
 
-            <div class="form">
-                <form action="/register" novalidate>
-                    <div class="r-col">
-                        <p><label for="reg-email">E-mail:</label></p>
-                        <input class="full" type="email" name="reg_email" id="reg-email" required>
-                    </div>
+                <div class="form">
+                    <form action="/register" novalidate>
+                        <div class="r-col">
+                            <p><label for="reg-email">E-mail:</label></p>
+                            <input class="full" type="email" name="reg_email" id="reg-email" required>
+                        </div>
 
-                    <div class="r-col">
-                        <p><label for="reg-pswd">Пароль:</label></p>
-                        <input class="full" type="password" name="reg_pswd" id="reg-pswd" required>
-                    </div>
+                        <div class="r-col">
+                            <p><label for="reg-pswd">Пароль:</label></p>
+                            <input class="full" type="password" name="reg_pswd" id="reg-pswd" required>
+                        </div>
 
-                    <input type="submit" class="btn btn-large" value="Войти" disabled>
-                </form>
+                        <input type="submit" class="btn btn-large" value="Войти" disabled>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-</div>
+
+    {% block modal %}{% endblock %}
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="/static/js/libs/jquery-1.9.1.min.js"><\/script>')</script>

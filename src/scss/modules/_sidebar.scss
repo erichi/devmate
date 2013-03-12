@@ -1,0 +1,23 @@
+.profile-info {
+  width: 210px;
+
+  ul {
+    @extend %no-list;
+
+    li {
+      color: #6e6a5e;
+      border-bottom: 1px solid $light-gray;
+      padding: 7px 0;
+    }
+  }
+
+  figure {
+    position: relative;
+
+    .btn {
+      position: absolute;
+      bottom: 8px;
+      right: 8px;
+    }
+  }
+}

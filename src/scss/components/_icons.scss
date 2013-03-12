@@ -1,0 +1,26 @@
+@import "icons/social/*.png";
+@include all-social-sprites;
+
+.social-sprite {
+  @extend %ir;
+  width: 23px;
+  height: 23px;
+  display: inline-block;
+  vertical-align: middle;
+
+  &:hover {
+    @include border-radius(7px);
+    @include box-shadow(inset 0 1px #82854e);
+  }
+}
+
+@import "rewards/*.png";
+@include all-rewards-sprites;
+
+.rewards-sprite {
+  @extend %ir;
+  width: 58px;
+  height: 55px;
+  display: inline-block;
+  vertical-align: middle;
+}
