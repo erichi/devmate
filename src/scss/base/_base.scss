@@ -4,6 +4,14 @@ body {
   background: #fff;
 }
 
+html,
+button,
+input,
+select,
+textarea {
+  color: $default-fc;
+}
+
 * {
   @include box-sizing(border-box);
 

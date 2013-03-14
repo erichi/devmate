@@ -65,12 +65,14 @@
                                 <h3 class="modal-title">Настройки</h3>
 
                                 <div class="form form-side-lbl">
-                                    <form action="/profile-settings">
+                                    <form action="/profile-settings" data-validate="parsley">
+                                        <hr>
+
                                         <div class="line">
                                             <label for="profile-first-name"><em>Имя:</em></label>
 
                                             <div class="field">
-                                                <input type="text" name="profile_first_name" id="profile-first-name" value="Константин" required>
+                                                <input type="text" name="profile_first_name" id="profile-first-name" value="Константин">
                                             </div>
                                         </div>
 
@@ -78,15 +80,17 @@
                                             <label for="profile-last-name"><em>Фамилия:</em></label>
 
                                             <div class="field">
-                                                <input type="text" name="profile_last_name" id="profile-last-name" value="Константинопольский" required>
+                                                <input type="text" name="profile_last_name" id="profile-last-name" value="Константинопольский">
                                             </div>
                                         </div>
+
+                                        <hr>
 
                                         <div class="line">
                                             <label for="profile-site"><em>Личный сайт:</em></label>
 
                                             <div class="field">
-                                                <input type="url" name="profile_site" id="profile-site" value="http://konstaninopolsky.ru" required>
+                                                <input type="text" name="profile_site" id="profile-site" value="http://konstaninopolsky.ru" data-trigger="change" data-type="url">
                                             </div>
                                         </div>
 
@@ -94,7 +98,7 @@
                                             <label for="profile-facebook"><em>Facebook</em>:</label>
 
                                             <div class="field">
-                                                <input type="text" name="profile_facebook" id="profile-facebook" value="www.facebook.com/kkostya" required>
+                                                <input type="text" name="profile_facebook" id="profile-facebook" value="www.facebook.com/kkostya">
                                             </div>
                                         </div>
 
@@ -102,7 +106,7 @@
                                             <label for="profile-vkontakte"><em>ВКонтакте:</em></label>
 
                                             <div class="field">
-                                                <input type="text" name="profile_vkontakte" id="profile-vkontakte" value="www.vk.com/kkostya" required>
+                                                <input type="text" name="profile_vkontakte" id="profile-vkontakte" value="www.vk.com/kkostya">
                                             </div>
                                         </div>
 
@@ -110,15 +114,17 @@
                                             <label for="profile-twitter"><em>Twitter:</em></label>
 
                                             <div class="field">
-                                                <input type="text" name="profile_twitter" id="profile-twitter" value="@kkostya" required>
+                                                <input type="text" name="profile_twitter" id="profile-twitter" value="@kkostya">
                                             </div>
                                         </div>
+
+                                        <hr>
 
                                         <div class="line">
                                             <label for="profile-email"><em>Email:</em></label>
 
                                             <div class="field">
-                                                <input type="email" name="profile_email" id="profile-email" value="bender@gmail.com" required>
+                                                <input type="email" name="profile_email" id="profile-email" value="bender@gmail.com" data-required="true">
                                             </div>
                                         </div>
 
@@ -126,9 +132,11 @@
                                             <label><em>Пароль:</em></label>
 
                                             <div class="field">
-                                                <a href="#" class="btn">сменить пароль</a>
+                                                <a href="#" class="btn btn-cc">сменить пароль</a>
                                             </div>
                                         </div>
+
+                                        <hr>
 
                                         <div class="line">
                                             <input type="submit" class="btn btn-large" value="Сохранить">
