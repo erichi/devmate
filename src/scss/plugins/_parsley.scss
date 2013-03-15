@@ -1,7 +1,12 @@
 .form {
-  input.parsley-error {
+  input.parsley-error,
+  input.parsley-success {
     background-position: 97% 50%;
     background-repeat: no-repeat;
+    padding-right: 40px !important;
+  }
+
+  input.parsley-error {
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAMAAAC6CgRnAAAAhFBMVEWtJyauJya5Kim5Kim5Kim5KimzKCe5Kim5Kim5Kim5Kim5Kim5Kim5Kim5KimuJyauJya2KSi5Kim5Kim5KimvJya5Kim5KimwJyetJya5Kim5Kim5Kim5KimuJya5Kim5Kim1KSi5Kim5Kim5Kim5Kim5Kim5Kim5KikAAACvJya5KikF9r2dAAAAKnRSTlP8/R2gbyLDME9IWkOaRVfu766THDrkMy/b+wUOD2Psbiu2jxMJH3lNPwDUQp/gAAAA7UlEQVR42m2S2XLDIAxFSdqmbfY99YYBg0HR//9fcWwLOePzducYMVxLAOFCxEFCjMIc8MXRuKkrDTLOJXOPP5xwu5N7LPCN53Vw5Xiq9r7FHnnpHd3lCwAcOOWdc0gOksNd58y80za6A8UK2JBMgUgJWwshpTUIlrYNfPIvuVt9wQdzDXfyG1hBZuIwAAvtUjgWtz8sVI2AI86SeUtvpz4H9IY6oz5ppIoOznOdaW87V97GmUC9yL3q/+39ie/UIe8dXOXUyPq3oF26nLjS+1CwHcx3OhvepSuvciDXYdW6jVR+oyzbT9JNxKb8D5e1cMeV6+TOAAAAAElFTkSuQmCC);
 
     &, &:focus {
@@ -11,9 +16,7 @@
     }
   }
 
-  .parsley-success {
-    background-position: 97% 50%;
-    background-repeat: no-repeat;
+  input.parsley-success {   
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAUCAMAAACknt2MAAAARVBMVEWiqUCiqUCiqUCiqUCiqUCiqUCiqUCiqUCepT6iqUCiqUCaoDyiqUCiqUCiqUCiqUCiqUCcoz2iqUAAAACZoDyboj2iqUAbnBpnAAAAFHRSTlOaRxgiYw5faLh/L9s6D3GgMMNNAMK2W0wAAABwSURBVHjadczLDoJQDEXRiqi8QSr9/081d9PJzYE9adKV1lxb412GXUnEkqSCmcrZI0nlu7/sTjau5n64kELzGL9Jxa1IxDGJuBXBKoGGXBxdJTz8RBWS5ItKEiYCYSIQpgJhKhAmAlFrKUrePL3uD+zVJq7uyJtVAAAAAElFTkSuQmCC);
   }
 

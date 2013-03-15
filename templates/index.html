@@ -136,11 +136,10 @@
                         <div id="auth-forgot-pswd" class="form auth-step">
                             <h3 class="modal-title">Напомнить пароль</h3>
 
-                            <form action="/forgot-password" novalidate>
+                            <form action="/forgot-password" data-validate="parsley" novalidate>
                                 <div class="line">
                                     <p><label for="recover-email">Введите свою почту:</label></p>
-                                    <input class="full" type="email" name="email" id="recover-email" required>
-                                    <p class="error"></p>
+                                    <input class="full" type="email" name="email" id="recover-email" data-required="true">
                                 </div>
                                 <div class="line c-line">
                                     <input type="submit" class="btn btn-large" value="Отправить пароль" disabled>
@@ -171,15 +170,15 @@
                 </div>
 
                 <div class="form">
-                    <form action="/register" novalidate>
+                    <form action="/register"  data-validate="parsley" novalidate>
                         <div class="r-col">
                             <p><label for="reg-email">E-mail:</label></p>
-                            <input class="full" type="email" name="reg_email" id="reg-email" required>
+                            <input class="full" type="email" name="reg_email" id="reg-email" data-required="true">
                         </div>
 
                         <div class="r-col">
                             <p><label for="reg-pswd">Пароль:</label></p>
-                            <input class="full" type="password" name="reg_pswd" id="reg-pswd" required>
+                            <input class="full" type="password" name="reg_pswd" id="reg-pswd"  data-required="true">
                         </div>
 
                         <input type="submit" class="btn btn-large" value="Войти" disabled>

@@ -58,94 +58,112 @@
     <div id="profile-settings-modal" class="modal modal-center hide fade" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-side-bg">
             <div class="modal-bottom-bg">
-                    <div class="modal-content">
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                <div class="modal-content">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
 
-                            <div class="modal-body">
-                                <h3 class="modal-title">Настройки</h3>
+                    <div class="modal-body">
+                        <h3 class="modal-title">Настройки</h3>
 
-                                <div class="form form-side-lbl">
-                                    <form action="/profile-settings" data-validate="parsley">
-                                        <hr>
+                        <div class="form form-side-lbl">
+                            <form action="/profile-settings" data-validate="parsley" novalidate>
+                                <hr>
 
-                                        <div class="line">
-                                            <label for="profile-first-name"><em>Имя:</em></label>
+                                <div class="line">
+                                    <label for="profile-first-name"><em>Имя:</em></label>
 
-                                            <div class="field">
-                                                <input type="text" name="profile_first_name" id="profile-first-name" value="Константин">
-                                            </div>
-                                        </div>
-
-                                        <div class="line">
-                                            <label for="profile-last-name"><em>Фамилия:</em></label>
-
-                                            <div class="field">
-                                                <input type="text" name="profile_last_name" id="profile-last-name" value="Константинопольский">
-                                            </div>
-                                        </div>
-
-                                        <hr>
-
-                                        <div class="line">
-                                            <label for="profile-site"><em>Личный сайт:</em></label>
-
-                                            <div class="field">
-                                                <input type="text" name="profile_site" id="profile-site" value="http://konstaninopolsky.ru" data-trigger="change" data-type="url">
-                                            </div>
-                                        </div>
-
-                                        <div class="line">
-                                            <label for="profile-facebook"><em>Facebook</em>:</label>
-
-                                            <div class="field">
-                                                <input type="text" name="profile_facebook" id="profile-facebook" value="www.facebook.com/kkostya">
-                                            </div>
-                                        </div>
-
-                                        <div class="line">
-                                            <label for="profile-vkontakte"><em>ВКонтакте:</em></label>
-
-                                            <div class="field">
-                                                <input type="text" name="profile_vkontakte" id="profile-vkontakte" value="www.vk.com/kkostya">
-                                            </div>
-                                        </div>
-
-                                        <div class="line">
-                                            <label for="profile-twitter"><em>Twitter:</em></label>
-
-                                            <div class="field">
-                                                <input type="text" name="profile_twitter" id="profile-twitter" value="@kkostya">
-                                            </div>
-                                        </div>
-
-                                        <hr>
-
-                                        <div class="line">
-                                            <label for="profile-email"><em>Email:</em></label>
-
-                                            <div class="field">
-                                                <input type="email" name="profile_email" id="profile-email" value="bender@gmail.com" data-required="true">
-                                            </div>
-                                        </div>
-
-                                        <div class="line">
-                                            <label><em>Пароль:</em></label>
-
-                                            <div class="field">
-                                                <a href="#" class="btn btn-cc">сменить пароль</a>
-                                            </div>
-                                        </div>
-
-                                        <hr>
-
-                                        <div class="line">
-                                            <input type="submit" class="btn btn-large" value="Сохранить">
-                                        </div>
-                                    </form>
+                                    <div class="field">
+                                        <input type="text" name="profile_first_name" id="profile-first-name" value="Константин">
+                                    </div>
                                 </div>
-                            </div>
+
+                                <div class="line">
+                                    <label for="profile-last-name"><em>Фамилия:</em></label>
+
+                                    <div class="field">
+                                        <input type="text" name="profile_last_name" id="profile-last-name" value="Константинопольский">
+                                    </div>
+                                </div>
+
+                                <hr>
+
+                                <div class="line">
+                                    <label for="profile-site"><em>Личный сайт:</em></label>
+
+                                    <div class="field">
+                                        <input type="text" name="profile_site" id="profile-site" value="http://konstaninopolsky.ru" data-type="url">
+                                    </div>
+                                </div>
+
+                                <div class="line">
+                                    <label for="profile-facebook"><em>Facebook</em>:</label>
+
+                                    <div class="field">
+                                        <input type="text" name="profile_facebook" id="profile-facebook" value="www.facebook.com/kkostya" data-type="url">
+                                    </div>
+                                </div>
+
+                                <div class="line">
+                                    <label for="profile-vkontakte"><em>ВКонтакте:</em></label>
+
+                                    <div class="field">
+                                        <input type="text" name="profile_vkontakte" id="profile-vkontakte" value="www.vk.com/kkostya" data-type="url">
+                                    </div>
+                                </div>
+
+                                <div class="line">
+                                    <label for="profile-twitter"><em>Twitter:</em></label>
+
+                                    <div class="field">
+                                        <input type="text" name="profile_twitter" id="profile-twitter" value="@kkostya">
+                                    </div>
+                                </div>
+
+                                <hr>
+
+                                <div class="line">
+                                    <label for="profile-email"><em>Email:</em></label>
+
+                                    <div class="field">
+                                        <input type="email" name="profile_email" id="profile-email" value="bender@gmail.com" data-required="true">
+                                    </div>
+                                </div>
+
+                                <div class="line">
+                                    <label><em>Пароль:</em></label>
+
+                                    <div class="field">
+                                        <a href="#" class="btn btn-cc">сменить пароль</a>
+                                    </div>
+                                </div>
+
+                                <hr>
+
+                                <div class="line">
+                                    <input type="submit" class="btn btn-large" value="Сохранить">
+                                </div>
+                            </form>
                         </div>
+                    </div>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="new-badge-modal" class="modal modal-center hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-side-bg">
+            <div class="modal-bottom-bg">
+                <div class="modal-content">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+
+                    <div class="modal-body">
+                        <h3 class="modal-title">Поздравляем! Ты получил новый бейдж</h3>
+
+                        Можешь поделить с друзьями:
+                        <a class="btn btn-fb" href="#">В Facebook</a>
+                        <a class="btn btn-vk" href="#">ВКонтакте</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 {% endblock %}

@@ -185,6 +185,10 @@ $modal-icons: sprite-map("icons/modal/*.png");
     }
   }
 
+  .parsley-error-list {
+    display: none !important;
+  }
+
   input[type="submit"] {
     padding: 10px 14px;
     vertical-align: bottom;

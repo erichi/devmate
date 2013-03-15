@@ -27,28 +27,47 @@
             //.next('.error').html('Введите ' + errText).toggle(disableBtn);
     }
 
+    function validateForm($form) {
+        var enableBtn = true;
+
+        $form.find('[data-required]').each(function(i, field) {
+            var $field = $(field),
+                $pField = $field.parsley();
+
+            if (!$field.val() || $pField.isValid === false) {
+                enableBtn = false;
+                return false;
+            }
+        });
+
+        toggleButtonState($form, enableBtn);
+    }
+
     // Auth form validation
     $authForm.on('submit',function (e) {
         e.preventDefault();
         submitForm($(this));
     }).find('[data-required]').on('keyup', function () {
-            var enableBtn = true;
+            validateForm($authForm);
+        });
 
-            $authForm.find('[data-required]').each(function(i, field) {
-                var $field = $(field),
-                    $pField = $field.parsley();
+    // Forgot password form validation
+    $forgotForm.on('submit',function (e) {
+        e.preventDefault();
+        submitForm($(this));
+    }).find('[data-required]').on('keyup', function () {
+            validateForm($forgotForm);
+        });
 
-                if (!$field.val() || $pField.validatedOnce) {
-                    enableBtn = false;
-                    return false;
-                }
-            });
-
-            toggleButtonState($authForm, enableBtn);
+    // Registration form validation
+    $regForm.on('submit',function (e) {
+        e.preventDefault();
+        submitForm($(this));
+    }).find('[data-required]').on('keyup', function () {
+            validateForm($regForm);
         });
 
     // Parsley - form validation plugin
-
     win.ParsleyConfig = $.extend( true, {}, win.ParsleyConfig, {
         messages: {
             defaultMessage: "Поле заполнено некорректно.",
@@ -81,8 +100,9 @@
     // Reset modal steps state
     $loginModal.on('show', function () {
         $authSteps.hide().eq(0).show();
-        $authForm.removeClass('submitted').get(0).reset();
-        //$authForm.find('input[type="submit"]').attr('disabled', true);
+        $authForm.parsley('destroy').get(0).reset();
+        toggleButtonState($authForm, false);
+        $authForm.parsley();
     });
 
     // Handle modal auth steps
@@ -94,34 +114,4 @@
         $authSteps.hide();
         $step.show();
     });
-
-    // Auth form validation
-    /*$authForm.on('submit', function(e) {
-        e.preventDefault();
-        validateForm($(this));
-    }).find(':required').on('change', function() {
-            updateValidationMessage(this);
-        }).on('keyup', function() {
-                updateButtonState($authForm);
-            });*/
-
-    // Forgot password form validation
-    $forgotForm.on('submit', function(e) {
-        e.preventDefault();
-        validateForm($(this));
-    }).find(':required').on('change', function() {
-            updateValidationMessage(this);
-        }).on('keyup', function() {
-            updateButtonState($forgotForm);
-        });
-
-    // Registration form validation
-    $regForm.on('submit', function(e) {
-        e.preventDefault();
-        validateForm($(this));
-    }).find(':required').on('change', function() {
-            updateValidationMessage(this);
-        }).on('keyup', function() {
-            updateButtonState($regForm);
-        });
 }(jQuery, window));
