@@ -114,4 +114,7 @@
         $authSteps.hide();
         $step.show();
     });
+
+    // Init pretty chekbox and radios
+    $('.pretty-check').prettyCheckable();
 }(jQuery, window));

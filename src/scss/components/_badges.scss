@@ -23,3 +23,20 @@
   color: #b29a69;
   @include text-shadow(0 1px rgba(#fff, .5));
 }
+
+.badge-questions {
+  padding: 7px;
+  font-size: 14px;
+  font-weight: normal;
+  color: #3f3d33;
+  background: #f4ecdc;
+  @include text-shadow(0 1px rgba(#fff, .5));
+}
+
+@import "badges/revs/*.png";
+@include all-revs-sprites;
+
+.rev-badge {
+  width: 125px;
+  height: 121px;
+}

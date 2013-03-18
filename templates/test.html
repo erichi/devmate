@@ -1,0 +1,48 @@
+
+{% extends "index.html" %}
+
+{% block title %}Тест{% endblock %}
+
+{% block content %}
+<div class="content test-page">
+    <header>
+        <ul class="breadcrumbs">
+            <li><a href="#">Курсы</a></li>
+            <li><a href="#">HTML</a></li>
+            <li><a href="#">Создание простого сайта</a></li>
+        </ul>
+
+        <h2>Пройдите тест</h2>
+
+        <article>
+            <div class="question-plate">
+                <div class="quest-cols">
+                    <div class="badge-wrap">
+                        <div class="badge badge-questions">Вопрос 1/5</div>
+                    </div>
+
+                    <p>Which two languages form the foundation of structure and presentation on the web?</p>
+
+                </div>
+            </div>
+        </article>
+    </header>
+
+    <article>
+        <form action="/">
+            <ul class="options-list">
+                <li><input type="radio" name="answer" value="1" id="q1" class="pretty-check" data-label="HTML and CSS"></li>
+                <li><input type="radio" name="answer" value="2" id="q2" class="pretty-check" data-label="Semantics and HTML"></li>
+                <li><input type="radio" name="answer" value="3" id="q3" class="pretty-check" data-label="Content and Structure"></li>
+                <li><input type="radio" name="answer" value="4" id="q4" class="pretty-check" data-label="Hyper Text and CSS"></li>
+            </ul>
+        </form>
+
+        <hr>
+
+        <a class="btn" href="#">Смотреть видео</a> <small>После просмотра видео, вернитесь к тесту</small>
+    </article>
+
+
+</div>
+{% endblock %}

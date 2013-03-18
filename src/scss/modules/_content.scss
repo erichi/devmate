@@ -251,18 +251,6 @@
       width: 88px;
       height: 89px;
     }
-
-/*    .beginner {
-      background: sprite($level-icons, beginner, 0, 0px) no-repeat;
-    }
-
-    .advanced {
-      background: sprite($level-icons, advanced, 0, 0px) no-repeat;
-    }
-
-    .professional {
-      background: sprite($level-icons, professional, 0, 0px) no-repeat;
-    }*/
   }
 
   .class-descr {
@@ -430,4 +418,58 @@
   .class-descr {
     padding-left: 70px;
   }
+}
+
+// Test page
+.test-page {
+  header {
+    padding-top: 30px;
+    .breadcrumbs {
+      margin-bottom: 5px;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+    }
+
+    article {
+      border-top: 1px solid #e8e8e2;
+      border-bottom: 1px solid #e8e8e2;
+      padding: 20px 0;
+    }
+  }
+
+  .question-plate {
+    background: #fff generated-image-url('quest-bg.png') no-repeat left bottom;
+    padding-left: 50px;
+
+    .quest-cols {
+      @extend %clearfix;
+    }
+
+    p {
+      padding: 11px;
+      margin: 0 40% 0 0;
+      background: #a2a940;
+      color: #fff;
+      font: italic normal 36px/40px Georgia, serif;
+      @include border-radius(5px);
+      @include text-shadow(0 -1px #3d3d3d);
+    }
+
+    .badge-wrap {
+      width: 39%;
+      float: right;
+    }
+  }
+
+  .options-list {
+    @extend %no-list;
+    //font-size: 28px;
+    font-weight: bold;
+  }
+}
+
+.content article small {
+  font-size: 80%;
 }

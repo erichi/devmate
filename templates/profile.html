@@ -9,6 +9,10 @@
             <h2>Константин Константинопольский</h2>
         </header>
 
+        <!-- DEV ONLY!!! -->
+        <a href="#new-badge-modal" class="btn btn-small" data-toggle="modal">Поазать окно "Новый бейдж"</a>
+        <!-- /DEV ONLY!!! -->
+
         <div class="page-with-sidebar profle-sidebar">
             <aside class="profile-info">
                 <figure>
@@ -149,18 +153,27 @@
         </div>
     </div>
 
-    <div id="new-badge-modal" class="modal modal-center hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div id="new-badge-modal" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-side-bg">
             <div class="modal-bottom-bg">
                 <div class="modal-content">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
 
                     <div class="modal-body">
-                        <h3 class="modal-title">Поздравляем! Ты получил новый бейдж</h3>
+                        <div class="badge-wrap">
+                            <div class="rev-badge revs-css"></div>
+                            Основы CSS
+                        </div>
 
-                        Можешь поделить с друзьями:
-                        <a class="btn btn-fb" href="#">В Facebook</a>
-                        <a class="btn btn-vk" href="#">ВКонтакте</a>
+                        <div class="badge-descr">
+                            <h3 class="modal-title">Поздравляем!<br>Ты получил новый бейдж</h3>
+
+                            Можешь поделиться с друзьями:
+                            <p>
+                                <a class="btn btn-fb" href="#">В Facebook</a>
+                                <a class="btn btn-vk" href="#">ВКонтакте</a>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>

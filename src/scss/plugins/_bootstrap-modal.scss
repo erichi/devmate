@@ -228,3 +228,38 @@ $modal-icons: sprite-map("icons/modal/*.png");
     }
   }
 }
+
+#new-badge-modal {
+  @include text-shadow(0 1px #fff);
+
+  .badge-wrap {
+    float: left;
+    width: 125px;
+    text-align: center;
+    color: #9d8d66;
+
+    .rev-badge {
+      margin-bottom: 5px;
+    }
+  }
+
+  .badge-descr {
+    padding-left: 145px;
+    font-size: 16px;
+  }
+
+  h3 {
+    font-size: 34px;
+    font-weight: normal;
+    line-height: 1;
+    color: $default-fc;
+  }
+  
+  p {
+    margin: 4px 0 0;
+  }
+  
+  .btn-fb {
+    margin-right: 15px;
+  }
+}
