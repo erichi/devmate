@@ -1,57 +1,41 @@
-.prettycheckbox,
+$form-icons: sprite-map("icons/forms/*.png");
+
 .prettyradio {
   display: inline-block;
   padding: 0;
   margin: 0;
-}
 
-.prettycheckbox a,
-.prettyradio a {
-  width: 30px;
-  height: 30px;
-  background: generated-image-url('icons/forms/checkable.png') top left no-repeat;
-  display: block;
-  float: left;
-  cursor: pointer;
-  margin: 0;
-}
-.prettyradio a {
-  background-position: 0 -120px;
-}
+  a {
+    background: sprite($form-icons, radio-unchecked) no-repeat;
+    width: 50px;
+    height: 50px;
+    display: block;
+    float: left;
+    cursor: pointer;
+    margin: 0;
 
-.prettycheckbox a:focus,
-.prettyradio a:focus {
-  outline: 0 none;
-}
+    &:hover {
+      background: sprite($form-icons, radio-hover) no-repeat;
+    }
 
-.prettycheckbox a:focus {
-  background-position: 0 -30px;
-}
+    &.checked,
+    &.checked:hover {
+      background: sprite($form-icons, radio-checked) no-repeat;
+    }
+  }
 
-.prettyradio a:focus {
-  background-position: 0 -150px;
-}
+  label {
+    display: block;
+    float: left;
+    margin-left: 14px;
+    cursor: pointer;
+    color: #6e6a5e;
+    line-height: 50px;
+    font-size: 28px;
+    font-weight: bold;
+  }
 
-.prettycheckbox a.checked {
-  background-position: 0 -60px;
-}
-
-.prettyradio a.checked {
-  background-position: 0 -180px;
-}
-
-.prettycheckbox a.checked:focus {
-  background-position: 0 -90px;
-}
-
-.prettyradio a.checked:focus {
-  background-position: 0 -210px;
-}
-
-.prettycheckbox label,
-.prettyradio label {
-  display: block;
-  float: left;
-  margin: 6px 5px;
-  cursor: pointer;
+  .checked + label {
+    color: #a2a940;
+  }
 }

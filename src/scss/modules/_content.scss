@@ -465,8 +465,11 @@
 
   .options-list {
     @extend %no-list;
-    //font-size: 28px;
-    font-weight: bold;
+    margin-top: 20px;
+    
+    li {
+      margin-bottom: 8px;
+    }
   }
 }
 
