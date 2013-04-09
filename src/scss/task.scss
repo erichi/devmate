@@ -1,0 +1,77 @@
+@import "compass/css3";
+$experimental-support-for-svg: true;
+
+@import "base/helpers";
+
+body {
+  background: #e1e1d6;
+}
+
+.main-content {
+  padding: 0;
+  @include box-shadow(none);
+
+  .content {
+    padding: 20px;
+  }
+}
+
+.container {
+  max-width: 100%;
+}
+
+.main-content header {
+  padding: 0 0 15px 50px;
+  font-size: 16px;
+  color: #59544c;
+
+  h2 {
+    font-size: 30px;
+    @include text-shadow(0 1px #fff);
+  }
+
+  h2, p {
+    margin: 0;
+  }
+
+  .breadcrumbs li a {
+    @include box-shadow(inset 0 -1px #fff);
+  }
+}
+
+.main-content .question-plate {
+  margin-bottom: 15px;
+
+  .badge-wrap {
+    width: 120px;
+  }
+
+  .quest-cols > p {
+    margin: 0 128px 0 0;
+  }
+}
+
+.cols {
+  @extend %clearfix;
+
+  .col {
+    float: left;
+    width: 50%;
+  }
+}
+
+.code-block {
+  position: relative;
+
+  .code-editor {
+    padding-right: 7px;
+  }
+
+  .code-console {
+    padding-left: 7px;
+  }
+
+  textarea {
+    width: 100%;
+  }
+}

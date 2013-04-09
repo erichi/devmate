@@ -440,14 +440,14 @@
   }
 
   .question-plate {
-    background: #fff generated-image-url('quest-bg.png') no-repeat left bottom;
+    background: generated-image-url('quest-bg.png') no-repeat left bottom;
     padding-left: 50px;
 
     .quest-cols {
       @extend %clearfix;
     }
 
-    p {
+    .quest-cols > p {
       padding: 11px;
       margin: 0 40% 0 0;
       background: #a2a940;

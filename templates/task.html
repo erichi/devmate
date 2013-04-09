@@ -1,0 +1,52 @@
+
+{% extends "index.html" %}
+
+{% block styles %}
+<link rel="stylesheet" href="/static/css/task.css">
+{% endblock %}
+
+{% block title %}Выполнение задания{% endblock %}
+
+{% block content %}
+<div class="content test-page">
+    <header>
+        <ul class="breadcrumbs">
+            <li><a href="#">Курсы</a></li>
+            <li><a href="#">HTML</a></li>
+            <li><a href="#">Создание простого сайта</a></li>
+        </ul>
+
+        <h2>Create an H1 containing the text "Smells Like Bakin".</h2>
+
+        <p>Your code from each task should be added to the code written in the previous task.</p>
+    </header>
+
+    <section class="task cols">
+        <div class="col">
+            <div class="question-plate">
+                <div class="quest-cols">
+                    <div class="badge-wrap">
+                        <div class="badge badge-questions">Задача 1/1</div>
+                        <p>
+                            <a class="btn" href="#">Проверить</a>
+                        </p>
+                    </div>
+
+                    <p>Write your code in the editor and click "Check My Work".</p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="code-block cols">
+        <section class="col code-editor">
+            <textarea id="task-code" cols="30" rows="10">Введите сюда код</textarea>
+        </section>
+
+        <section class="col code-console">
+            <textarea id="task-code" cols="30" rows="10">Введите сюда код</textarea>
+        </section>
+    </div>
+</div>
+{% endblock %}
