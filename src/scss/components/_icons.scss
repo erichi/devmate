@@ -1,3 +1,8 @@
+.ico {
+  display: inline-block;
+  vertical-align: middle;
+}
+
 @import "icons/social/*.png";
 @include all-social-sprites;
 
@@ -24,3 +29,7 @@
   display: inline-block;
   vertical-align: middle;
 }
+
+$controls-sprite-dimensions: true;
+@import "icons/controls/*.png";
+@include all-controls-sprites;

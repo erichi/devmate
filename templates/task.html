@@ -44,8 +44,23 @@
             <textarea id="task-code" cols="30" rows="10">Введите сюда код</textarea>
         </section>
 
-        <section class="col code-console">
-            <textarea id="task-code" cols="30" rows="10">Введите сюда код</textarea>
+        <section class="col code-preview">
+            <div class="side-arrow"></div>
+            <div class="preview-wrap">
+                <div class="file-block">
+                    <form action="/">
+                        <button class="btn">
+                            <i class="ico controls-refresh"></i> обновить
+                        </button>
+                        <div class="file-name">
+                            <input type="text" value="index.html"/>
+                        </div>
+                    </form>
+                </div>
+                <div class="preview-block">
+                    <iframe src="/task-preview" frameborder="0"></iframe>
+                </div>
+            </div>
         </section>
     </div>
 </div>
